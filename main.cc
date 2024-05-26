@@ -7,18 +7,18 @@ int main() {
     Library library("library.db");
 
     // Benutzer hinzufügen
-    User user1(1, "John Doe", "john@example.com");
-    library.add_user(user1);
+    User user2(2, "Hans Hartz", "hans@hartz.de");
+    library.add_user(user2);
 
     // Bücher hinzufügen
-    Book book1(1, "first book", "markus", "12345678");
-    library.add_book(book1);
+    Book book2(2, "second book", "Ursula Pitchi", "23456789");
+    library.add_book(book2);
 
     // Buch ausleihen
-    // library.borrow_book(1, 1);
+    // library.borrow_book(2, 2);
 
     // Buch zurückgeben
-    // library.return_book(1, 1);
+    library.return_book(2, 2);
 
     // Benutzer entfernen
     // library.remove_user(1);
