@@ -34,6 +34,7 @@ void Library::add_book(const Book &book) {
                         book.get_author() + "', '" + book.get_isbn() + "', " +
                         std::to_string(book.get_is_available()) + ");";
     std::cout << "Executing query (add_book): " << query << std::endl; // Debug-Ausgabe
+    // die Abfrage wird durch db.execute(query) aufgerufen; es wird nur dann ein Fehler geworfen, wenn sie fehlschlägt
     if (!db.execute_query(query)) {
         std::cerr << "Failed to add book with ID " << book.get_id() << std::endl;
     }
